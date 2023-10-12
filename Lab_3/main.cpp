@@ -196,7 +196,7 @@ void Print_Message(Digit x[], Digit y[], int variable, int EdvVey, int num_var) 
         string_var = "Вейерштрасса";
         break;
     }
-    cout << "Точка " << var << num_var << " на эллиптической кривой в форме " << string_var << ":" << endl
+    cout << "Точка " << var << num_var << " на кривой в форме " << string_var << ":" << endl
          << "x:" << NumToStringDigit(x) << endl
          << "y:" << NumToStringDigit(y) << endl;
     cout << endl;
@@ -220,7 +220,7 @@ int main()
     StringToNumber("45e1798bc02b54c4dabcb8233c66eb778acd6dc44b2a21b140d22b7a8a49ac8f", a_y);
     StringToNumber("182f29adadafa136a9635ed9d2688245885eece8b6327cd67b87d7e099243d23", b_x);
     StringToNumber("d7f1e9c9c09f80c8d201c47524095b9cd0571e969eeedd3154ba59fb7db710f7", b_y);
-    cout << "1) Сложение на эллиптической кривой в форме Эдвардса" << endl << endl;
+    cout << "1) Сложение на кривой в форме Эдвардса" << endl << endl;
     cout << "Контрольный тест 1:" << endl;
     VeyToEdv(x1, y1, u1, v1);
     Print_Message(x1, y1, 1, 2, 1);
@@ -229,7 +229,7 @@ int main()
     Print_Message(x2, y2, 2, 2, 1);
     Print_Message(u2, v2, 2, 1, 1);
     Edv_adds(u1, v1, u2, v2, x_res, y_res);
-    cout << "A + B = C на эллиптической кривой в форме Эдвардса... " << endl;
+    cout << "A + B = C на кривой в форме Эдвардса... " << endl;
     Print_Message(x_res, y_res, 3, 1, 1);
     EdvToVey(x_res, y_res, u1, v1);
     Print_Message(u1, v1, 3, 2, 1);
@@ -243,7 +243,7 @@ int main()
     Print_Message(x4, y4, 2, 2, 2);
     Print_Message(u2, v2, 2, 1, 2);
     Edv_adds(u1, v1, u2, v2, x_res, y_res);
-    cout << "A + B = C на эллиптической кривой в форме Эдвардса... " << endl;
+    cout << "A + B = C на кривой в форме Эдвардса... " << endl;
     Print_Message(x_res, y_res, 3, 1, 2);
     EdvToVey(x_res, y_res, u2, v2);
     Print_Message(u2, v2, 3, 2, 2);
@@ -257,30 +257,30 @@ int main()
     Print_Message(b_x, b_y, 2, 2, 3);
     Print_Message(u2, v2, 2, 1, 2);
     Edv_adds(u1, v1, u2, v2, x_res, y_res);
-    cout << "A + B = C на эллиптической кривой в форме Эдвардса... " << endl;
+    cout << "A + B = C на кривой в форме Эдвардса... " << endl;
     Print_Message(x_res, y_res, 3, 1, 3);
     EdvToVey(x_res, y_res, u2, v2);
     Print_Message(u2, v2, 3, 2, 3);
     cout << endl;
 
-    cout << "2) Сложение и удвоение на эллиптической кривой в форме Вейерштрасса" << endl << endl;
+    cout << "2) Сложение и удвоение на кривой в форме Вейерштрасса" << endl << endl;
     cout << "Контрольный тест 1:" << endl;
     Print_Message(x1, y1, 1, 2, 1);
     Print_Message(x2, y2, 2, 2, 1);
-    cout << "A + B = C на эллиптической кривой в форме Вейерштрасса... " << endl;
+    cout << "A + B = C на кривой в форме Вейерштрасса... " << endl;
     Vey_adds(x1, y1, x2, y2, x_res, y_res);
     Print_Message(x_res, y_res, 3, 2, 1);
-    cout << "Удвоение 2A = C на эллиптической кривой в форме Вейерштрасса... " << endl;
+    cout << "Удвоение 2A = C на кривой в форме Вейерштрасса... " << endl;
     Vey_adds(x1, y1, x1, y1, x_res, y_res);
     Print_Message(x_res, y_res, 3, 2, 1);
     cout << endl;
 
     Print_Message(x3, y3, 1, 2, 2);
     Print_Message(x4, y4, 2, 2, 2);
-    cout << "A + B = C на эллиптической кривой в форме Вейерштрасса... " << endl;
+    cout << "A + B = C на кривой в форме Вейерштрасса... " << endl;
     Vey_adds(x3, y3, x4, y4, x_res, y_res);
     Print_Message(x_res, y_res, 3, 2, 2);
-    cout << "Удвоение 2A = C на эллиптической кривой в форме Вейерштрасса... " << endl;
+    cout << "Удвоение 2A = C на кривой в форме Вейерштрасса... " << endl;
     Vey_adds(x3, y3, x3, y3, x_res, y_res);
     Print_Message(x_res, y_res, 3, 2, 2);
     cout << endl;
@@ -288,10 +288,10 @@ int main()
     cout << "Вариант 13" << endl;
     Print_Message(a_x, a_y, 1, 2, 3);
     Print_Message(b_x, b_y, 2, 2, 3);
-    cout << "A + B = C на эллиптической кривой в форме Вейерштрасса... " << endl;
+    cout << "A + B = C на кривой в форме Вейерштрасса... " << endl;
     Vey_adds(a_x, a_y, b_x, b_y, x_res, y_res);
     Print_Message(x_res, y_res, 3, 2, 3);
-    cout << "Удвоение 2A = C на эллиптической кривой в форме Вейерштрасса... " << endl;
+    cout << "Удвоение 2A = C на кривой в форме Вейерштрасса... " << endl;
     Vey_adds(a_x, a_y, a_x, a_y, x_res, y_res);
     Print_Message(x_res, y_res, 3, 2, 3);
     cout << endl;
