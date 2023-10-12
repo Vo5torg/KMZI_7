@@ -205,7 +205,7 @@ void Print_Message(Digit x[], Digit y[], int variable, int EdvVey, int num_var) 
     if(variable == 5) {
         cout << "Число К" << num_var << ":" << endl << NumToStringDigit(x) << endl << endl;
     } else {
-        cout << "Точка " << var << num_var << " на эллиптической кривой в форме " << string_var << ":" << endl
+        cout << "Точка " << var << num_var << " на кривой в форме " << string_var << ":" << endl
              << "x:" << NumToStringDigit(x) << endl
              << "y:" << NumToStringDigit(y) << endl;
         cout << endl;
@@ -292,7 +292,7 @@ int main()
     StringToNumber("182f29adadafa136a9635ed9d2688245885eece8b6327cd67b87d7e099243d23", bx);
     StringToNumber("d7f1e9c9c09f80c8d201c47524095b9cd0571e969eeedd3154ba59fb7db710f7", by);
     StringToNumber("b7e2e16f9951ce2b132b6f9b947606a826db96a81895883871941d6c0a8980d1", k3);
-    cout << "1) Умножение на эллиптической кривой в форме Вейерштрасса" << endl;
+    cout << "1) Умножение на кривой в форме Вейерштрасса" << endl;
     cout << "Контрольный тест 1:" << endl;
     Print_Message(x1, y1, 1, 2, 1);
     Print_Message(k1, k1, 5, 2, 1);
@@ -320,7 +320,7 @@ int main()
     cout << "D1 = B1 * K1 ..." << endl;
     Mult_Vey(bx, by, k3, x_res, y_res);
     Print_Message(x_res, y_res, 4, 2, 1);
-    cout << "2) Умножение на эллиптической кривой в форме Эдвардса" << endl;
+    cout << "2) Умножение на кривой в форме Эдвардса" << endl;
     cout << "Контрольный тест 1:" << endl;
     VeyToEdv(x1, y1, edv_x, edv_y);
     Print_Message(edv_x, edv_y, 1, 1, 1);
